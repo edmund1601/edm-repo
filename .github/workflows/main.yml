@@ -48,9 +48,11 @@ jobs:
         run: docker run -d --name edm-angular -p 8080:80 edm-angular:v1
 
       - name: Check Container
-        run: docker ps
+        run: docker ps -a
 
-      
+      - name: Check Container Logs
+        run: docker logs edm-angular
+    
       - name: Test Website
         run: curl http://localhost:8080
 
