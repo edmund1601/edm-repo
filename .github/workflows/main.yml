@@ -37,4 +37,16 @@ jobs:
 
       - name: check build output
         run: ls -R dist
-  
+
+      - name: Build Docker Image
+        run: docker build -t edm-angular:v1 .
+
+      - name: Check Docker image
+        run: docker images
+
+      - name: Run docker container
+        run: docker run -d --name edm-angular -p 8080:80 edm-angular:v1
+
+      - name: Check Container
+        run: docker ps
+
