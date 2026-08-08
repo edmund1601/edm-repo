@@ -34,4 +34,7 @@ jobs:
 
       - name: Build angular app
         run: npm run build
+
+      - name: check build output
+        run: ls -R dist
   
