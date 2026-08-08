@@ -24,9 +24,17 @@ jobs:
         with:
           node-version: 22
 
+      - name: Check node version
+        run: |
+          node -v
+          npm -v
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build angular app
         run: npm run build
+
+      - name: check build output
+        run: ls -R dist
   
