@@ -54,5 +54,7 @@ jobs:
         run: docker logs edm-angular
     
       - name: Test Website
-        run: curl http://localhost:8080
+        run: |
+          sleep 5
+          curl -v http://localhost:8080
 
