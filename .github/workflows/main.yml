@@ -50,3 +50,7 @@ jobs:
       - name: Check Container
         run: docker ps
 
+      
+      - name: Test Website
+        run: curl http://localhost:8080
+
